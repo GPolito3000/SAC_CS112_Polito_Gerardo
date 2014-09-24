@@ -1,0 +1,38 @@
+import java.util.Scanner; 
+public class Guess {
+
+	
+	
+	
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		
+		
+		int computerNum;
+		int guess;
+		System.out.print("Enter number");
+		guess = input.nextInt();
+		
+		computerNum=(int)(Math.random()* 10);
+		System.out.println("Enter Number");
+	if (guess == computerNum)
+
+        System.out.println("Your guess is correct. Congratulations!");
+
+  else if (guess < computerNum)
+
+        System.out
+
+                   .println("Your guess is smaller than the secret number.");
+
+  else if (guess > computerNum)
+
+        System.out
+
+                   .println("Your guess is greater than the secret number.");
+
+}
+
+}
+		
