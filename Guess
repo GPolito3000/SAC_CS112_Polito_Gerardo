@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Guess {
+
+	public static void main(String[] args) {
+
+
+		int secretNumber;
+
+
+
+		Scanner keyboard = new Scanner(System.in);
+		boolean cont = true;
+		
+
+		//int guessAttempt;
+		int guess;
+		
+		do
+		{
+			secretNumber = (int) (Math.random() * 10);
+			do {
+	
+				System.out.print("Enter a guess (1-10). \n Enter you Guess: ");
+	
+				guess = keyboard.nextInt();
+	
+				System.out.println("Your guess is " + guess);
+	
+				if (guess == secretNumber)
+	
+					System.out.println("Your guess is correct. Congratulations!");
+	
+				else if (guess < secretNumber)
+	
+					System.out
+	
+							.println("Your guess is smaller than the secret number. \n Guess Again");
+	
+				else if (guess > secretNumber)
+	
+					System.out
+	
+							.println("Your guess is greater than the secret number. \n Guess Again");
+	
+			} while (guess != secretNumber);
+			System.out.print("Want to play again? (True/False);");
+			System.out.println("Do you want to play again? (Yes/No)");
+			String Again = keyboard.next();
+			if (Again.equals("Y"))
+				cont = true;
+			else
+				cont = false;
+	
+		
+	} while (cont);
+ }
+}
+
