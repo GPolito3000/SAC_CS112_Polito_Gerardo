@@ -1,0 +1,39 @@
+import java.util.Scanner;
+		public class OddOrEven {
+// 3. Write a Odd/Even game, where the user is asked to guess whether a system generated number is Odd or Even			
+			public static void main(String[] args) {
+				int secretNumber;
+				Scanner keyboard = new Scanner(System.in);
+				boolean cont = true;
+				int OddOrEven;
+				do
+{
+					secretNumber = (int) (Math.random() * 2 + 1);
+					// 6. Use a class to generate the random odd/even number
+					// (2 Equals Even and 1 Equals Odd)
+					do {
+						System.out.print("Is my random number odd or even (Type 1 for Odd, or 2 for Even). \n Enter your Guess: ");
+						OddOrEven = keyboard.nextInt();
+						System.out.println("Your guess is " + OddOrEven);
+						if (OddOrEven == secretNumber)
+							System.out.println("Your guess is correct. Congratulations!");
+						else if (OddOrEven < secretNumber)
+							System.out
+							.println("Sorry the number was not Odd. \n Sorry you lose!!Type 2 for even to end the this game.");
+						else if (OddOrEven > secretNumber)
+							System.out
+							.println("Sorry the number was not Even. \n Sorry you lose!!Type 1 for odd to end this game.");
+} 					while (OddOrEven != secretNumber);
+					
+					System.out.println("Do you want to play again? (Y=Yes/N=No)");
+					// 4. Allow user to play until no longer interested. 
+					String Again = keyboard.next();
+					if (Again.equals("Y"))
+						cont = true;
+					else
+						cont = false;
+} 	while (cont);
+
+			}
+
+		}
